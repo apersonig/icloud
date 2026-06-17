@@ -6,11 +6,18 @@
   <title>iCloud Bypass Guide</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark">
   <div class="page">
     <header>
-      <h1>iCloud Bypass Guide</h1>
-      <p class="lead">A clean, simple reference for iCloud bypass methods, tools, and compatibility information inspired by iOS system guides.</p>
+      <div style="display:flex;align-items:center;gap:12px;justify-content:space-between;">
+        <div>
+          <h1>iCloud Bypass Guide</h1>
+          <p class="lead">A clean, simple reference for iCloud bypass methods, tools, and compatibility information inspired by iOS system guides.</p>
+        </div>
+        <div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">Toggle Theme</button>
+        </div>
+      </div>
     </header>
 
     <section class="card">
@@ -20,18 +27,7 @@
 
     <section class="card">
       <h2>What is iCloud Activation Lock?</h2>
-      <p>Activation Lock is part of Apple’s security design. When enabled, a device requires the owner’s Apple ID and password after a reset. Bypass techniques vary by device model and firmware and may not work on active activation locks.</p>
-    </section>
-
-    <section class="card">
-      <h2>Common categories</h2>
-      <p>Common bypass approaches include:</p>
-      <ul>
-        <li>Device-specific checkm8 and checkra1n tools for older hardware.</li>
-        <li>Hardware-based unlocking for targeted models.</li>
-        <li>Software workarounds for temporary access.</li>
-      </ul>
-      <p>Always verify compatibility with your device and understand the risks before attempting any procedure.</p>
+      <p>Activation Lock is part of Apple's security design. When enabled, a device requires the owner's Apple ID and password after a reset. Bypass techniques vary by device model and firmware and may not work on active activation locks.</p>
     </section>
 
     <section class="card">
@@ -45,5 +41,26 @@
       <p>For educational purposes only. Respect device ownership and local laws.</p>
     </footer>
   </div>
+  <script>
+    (function(){
+      var btn = document.getElementById('theme-toggle');
+      function applyTheme(theme){
+        if(theme === 'light') document.body.classList.remove('dark');
+        else document.body.classList.add('dark');
+        if(btn) btn.textContent = theme === 'light' ? 'Going dark!' : 'Turn the lights on!';
+      }
+      var stored = localStorage.getItem('theme');
+      if(stored) applyTheme(stored);
+      else applyTheme('dark'); // default
+      if(btn){
+        btn.addEventListener('click', function(){
+          var isDark = document.body.classList.contains('dark');
+          var next = isDark ? 'light' : 'dark';
+          localStorage.setItem('theme', next);
+          applyTheme(next);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

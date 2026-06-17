@@ -12,26 +12,26 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      background: #ffffff;
-      border: 1px solid rgba(60, 60, 67, 0.12);
+      background: var(--card-bg);
+      border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
     }
     thead {
-      background: #f2f2f7;
-      border-bottom: 1px solid rgba(60, 60, 67, 0.12);
+      background: transparent;
+      border-bottom: 1px solid var(--border);
     }
     th {
       padding: 14px;
       text-align: left;
       font-weight: 600;
-      color: #1c1c1e;
+      color: var(--text);
       font-size: 0.95rem;
     }
     td {
       padding: 14px;
-      border-bottom: 1px solid rgba(60, 60, 67, 0.1);
-      color: #2c2c2e;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
       font-size: 0.95rem;
     }
     tbody tr:last-child td {
@@ -39,10 +39,10 @@
     }
     .device-name {
       font-weight: 600;
-      color: #007aff;
+      color: var(--link);
     }
     .device-name a {
-      color: #007aff;
+      color: var(--link);
       text-decoration: none;
       transition: opacity 0.2s ease;
     }
@@ -63,7 +63,7 @@
     }
     .note {
       font-size: 0.85rem;
-      color: #6e6e73;
+      color: var(--muted);
     }
     .legend {
       display: grid;
@@ -81,7 +81,7 @@
       width: 20px;
       height: 20px;
       border-radius: 4px;
-      background: #f2f2f7;
+      background: var(--bg);
       border: 2px solid;
     }
     .legend-box.yes {
@@ -99,7 +99,7 @@
     .back-link {
       display: inline-block;
       margin-bottom: 24px;
-      color: #007aff;
+      color: var(--link);
       text-decoration: none;
       font-weight: 600;
     }
@@ -108,13 +108,20 @@
     }
   </style>
 </head>
-<body>
+<body class="dark">
   <div class="page">
-    <a href="../index.html" class="back-link">← Back to Guide</a>
+    <a href="../index.html" class="back-link"><- Back to Guide</a>
     
     <header>
-      <h1>iDevice Compatibility Chart</h1>
-      <p class="lead">Comprehensive compatibility reference for bypass methods across Apple devices.</p>
+      <div style="display:flex;align-items:center;gap:12px;justify-content:space-between;">
+        <div>
+          <h1>iDevice Compatibility Chart</h1>
+          <p class="lead">Comprehensive compatibility reference for bypass methods across Apple devices.</p>
+        </div>
+        <div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">Toggle Theme</button>
+        </div>
+      </div>
     </header>
 
     <section class="card">
@@ -325,21 +332,30 @@
       </table>
     </section>
 
-    <section class="card">
-      <h2>Important Notes</h2>
-      <ul>
-        <li><strong>checkm8 Exploit:</strong> Affects devices with A7-A11 chips. Requires DFU mode access and specialized tools.</li>
-        <li><strong>checkra1n Tool:</strong> Works on A5-A11 chips. Requires a computer and USB connection. Not available for newer chips.</li>
-        <li><strong>Hardware Methods:</strong> Vary by device generation. May require physical device modifications or specialized equipment.</li>
-        <li><strong>Software Workarounds:</strong> Limited effectiveness on newer devices. Often requires specific iOS versions or configurations.</li>
-        <li><strong>Compatibility:</strong> Methods depend on device chip, iOS version, and specific hardware configuration.</li>
-        <li><strong>Disclaimer:</strong> This chart is for educational purposes. Always verify compatibility and understand legal implications before attempting any procedure.</li>
-      </ul>
-    </section>
-
     <footer>
       <p>For educational purposes only. Respect device ownership and local laws.</p>
     </footer>
   </div>
+  <script>
+    (function(){
+      var btn = document.getElementById('theme-toggle');
+      function applyTheme(theme){
+        if(theme === 'light') document.body.classList.remove('dark');
+        else document.body.classList.add('dark');
+        if(btn) btn.textContent = theme === 'light' ? 'Going dark!' : 'Turn the lights on!';
+      }
+      var stored = localStorage.getItem('theme');
+      if(stored) applyTheme(stored);
+      else applyTheme('dark'); // default
+      if(btn){
+        btn.addEventListener('click', function(){
+          var isDark = document.body.classList.contains('dark');
+          var next = isDark ? 'light' : 'dark';
+          localStorage.setItem('theme', next);
+          applyTheme(next);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
