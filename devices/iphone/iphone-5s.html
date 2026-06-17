@@ -50,10 +50,17 @@
 </head>
 <body class="dark">
   <div class="page">
-    <a href="../../charts/index.html" class="back-link">← Back to Compatibility Chart</a>
+    <a href="../../charts/index.html" class="back-link"><- Back to Compatibility Chart</a>
     <header>
-      <h1>Version Selection (iPhone 5s)</h1>
-      <p class="lead">Different firmware versions will require different steps to jailbreak your iOS device. This page will help you find where to start. Select the appropriate page for your version from the chart below. Note that the "from" and "to" fields are inclusive. This means that, for example, the "from 10.0 to 10.3.4" row includes version 10.0, version 10.3.4, and all versions in-between.</p>
+      <div style="display:flex;align-items:center;gap:12px;justify-content:space-between;">
+        <div>
+          <h1>Version Selection (iPhone 5s)</h1>
+          <p class="lead">Different firmware versions will require different steps to jailbreak your iOS device. This page will help you find where to start. Select the appropriate page for your version from the chart below. Note that the "from" and "to" fields are inclusive. This means that, for example, the "from 10.0 to 10.3.4" row includes version 10.0, version 10.3.4, and all versions in-between.</p>
+        </div>
+        <div>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">Toggle Theme</button>
+        </div>
+      </div>
 
     <section class="card chart-container">
       <h2>iPhone 5s</h2>
@@ -76,7 +83,7 @@
           <tr>
             <td>11.0</td>
             <td>11.4.1</td>
-            <td><a href="../../guides/using-hackt1vator.html">Using Hackt1vator</a></td>
+            <td>-</td>
           </tr>
           <tr>
             <td>10.3.3</td>
@@ -87,7 +94,7 @@
           <tr>
             <td>10.0</td>
             <td>10.3.2</td>
-            <td>-</td>
+            <td><a href="../../guides/deleting-setupapp.html">Deleting setup.app</a></td>
           </tr>
           <tr>
             <td>9.3.5</td>
@@ -97,7 +104,7 @@
           <tr>
             <td>9.3.4</td>
             <td>9.3.4</td>
-            <td>-</td>
+            <td><a href="../../guides/deleting-setupapp.html">Deleting setup.app</a></td>
           </tr>
           <tr>
             <td>9.3.3</td>
@@ -107,7 +114,7 @@
           <tr>
             <td>7.0</td>
             <td>9.3.2</td>
-            <td>-</td>
+            <td><a href="../../guides/deleting-setupapp.html">Deleting setup.app</a></td>
           </tr>
         </tbody>
       </table>
@@ -117,5 +124,26 @@
       <p>For educational purposes only. Respect ownership and legal restrictions.</p>
     </footer>
   </div>
+  <script>
+    (function(){
+      var btn = document.getElementById('theme-toggle');
+      function applyTheme(theme){
+        if(theme === 'light') document.body.classList.remove('dark');
+        else document.body.classList.add('dark');
+        if(btn) btn.textContent = theme === 'light' ? 'Going dark!' : 'Turn the lights on!';
+      }
+      var stored = localStorage.getItem('theme');
+      if(stored) applyTheme(stored);
+      else applyTheme('dark');
+      if(btn){
+        btn.addEventListener('click', function(){
+          var isDark = document.body.classList.contains('dark');
+          var next = isDark ? 'light' : 'dark';
+          localStorage.setItem('theme', next);
+          applyTheme(next);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
