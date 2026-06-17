@@ -1,69 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Compatibility Chart — Select Device</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iDevice Compatibility Chart</title>
+  <link rel="stylesheet" href="../style.css">
   <style>
-    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
-    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;background:#f5f7fa}
-    .card{background:#fff;padding:28px;border-radius:10px;box-shadow:0 6px 20px rgba(30,40,60,0.08);width:360px;text-align:center}
-    h1{margin:0 0 12px;font-size:20px}
-    p.lead{margin:0 0 18px;color:#556}
-    .choices{display:flex;gap:10px;justify-content:center;margin:18px 0}
-    .choice{flex:1;padding:12px 10px;border-radius:8px;border:1px solid #e1e6ef;background:#f9fbff;cursor:pointer;user-select:none}
-    .choice.selected{background:#2b7cff;color:#fff;border-color:#1f62d0}
-    .actions{display:flex;gap:10px;justify-content:center;margin-top:14px}
-    .btn{padding:10px 14px;border-radius:8px;border:0;background:#2b7cff;color:#fff;cursor:pointer}
-    .btn.secondary{background:#e9eef8;color:#2b3a5a}
-    small{display:block;margin-top:10px;color:#889}
+    .chart-container {
+      margin: 24px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border: 1px solid rgba(60, 60, 67, 0.12);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    thead {
+      background: #f2f2f7;
+      border-bottom: 1px solid rgba(60, 60, 67, 0.12);
+    }
+    th {
+      padding: 14px;
+      text-align: left;
+      font-weight: 600;
+      color: #1c1c1e;
+      font-size: 0.95rem;
+    }
+    td {
+      padding: 14px;
+      border-bottom: 1px solid rgba(60, 60, 67, 0.1);
+      color: #2c2c2e;
+      font-size: 0.95rem;
+    }
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .device-name {
+      font-weight: 600;
+      color: #007aff;
+    }
+    .device-name a {
+      color: #007aff;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+    .device-name a:hover {
+      opacity: 0.7;
+      text-decoration: underline;
+    }
+    .compatible {
+      color: #34c759;
+      font-weight: 600;
+    }
+    .partial {
+      color: #ff9500;
+      font-weight: 600;
+    }
+    .incompatible {
+      color: #ff3b30;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #6e6e73;
+    }
+    .legend {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .legend-box {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      background: #f2f2f7;
+      border: 2px solid;
+    }
+    .legend-box.yes {
+      background: #d1f4d8;
+      border-color: #34c759;
+    }
+    .legend-box.partial {
+      background: #ffecd1;
+      border-color: #ff9500;
+    }
+    .legend-box.no {
+      background: #ffd1d1;
+      border-color: #ff3b30;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: #007aff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h1>Device Compatibility Chart</h1>
-      <p class="lead">Select your device type to view supported models and firmware compatibility.</p>
+  <div class="page">
+    <a href="../index.html" class="back-link">← Back to Guide</a>
+    
+    <header>
+      <h1>iDevice Compatibility Chart</h1>
+      <p class="lead">Comprehensive compatibility reference for bypass methods across Apple devices.</p>
+    </header>
 
-      <div class="choices" role="tablist" aria-label="Device types">
-        <div class="choice" data-device="iphone" tabindex="0">iPhone</div>
-        <div class="choice" data-device="ipad" tabindex="0">iPad</div>
-        <div class="choice" data-device="ipod" tabindex="0">iPod Touch</div>
+    <section class="card">
+      <h2>Chart Legend</h2>
+      <div class="legend">
+        <div class="legend-item">
+          <span class="legend-box yes"></span>
+          <span><strong>Latest</strong> - bypassing works with latest version of iOS for this device</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-box partial"></span>
+          <span><strong>Compatible</strong> - bypassing works with an older version of iOS for this device.</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-box no"></span>
+          <span><strong>Incompatible</strong> - bypassing is not possible for this device.</span>
+        </div>
       </div>
+    </section>
 
-      <div class="actions">
-        <button class="btn" id="viewBtn" disabled>View Chart</button>
-        <button class="btn secondary" id="resetBtn">Reset</button>
-      </div>
-      <small id="hint">Choose a device type to enable the chart.</small>
-    </div>
+    <section class="card chart-container">
+      <h2>iPhone</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Latest bypassable iOS version (beta version if applicable)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-17e.html">iPhone 17e</a></td>
+            <td class="incompatible">None</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-air.html">iPhone Air</a></td>
+            <td class="partial">iOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-17.html">iPhone 17</a></td>
+            <td class="partial">iOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-16e.html">iPhone 16e</a></td>
+            <td class="partial">iOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-16.html">iPhone 16</a></td>
+            <td class="partial">iOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-15.html">iPhone 15</a></td>
+            <td class="partial">iOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-14.html">iPhone 14</a></td>
+            <td class="partial">iOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-se-3.html">iPhone SE (3rd Gen, 2022)</a></td>
+            <td class="partial">iOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-13.html">iPhone 13</a></td>
+            <td class="partial">iOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-12.html">iPhone 12</a></td>
+            <td class="partial">iOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-se-2.html">iPhone SE (2nd Gen, 2020)</a></td>
+            <td class="partial">iOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-11.html">iPhone 11</a></td>
+            <td class="partial">iOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-xr.html">iPhone XR</a></td>
+            <td class="partial">iOS 18.7.2</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-xr.html">iPhone XS</a></td>
+            <td class="partial">iOS 18.7.2</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-x.html">iPhone X</a></td>
+            <td class="compatible">iOS 16.7.16</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-8.html">iPhone 8</a></td>
+            <td class="compatible">iOS 16.7.16</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-7.html">iPhone 7</a></td>
+            <td class="compatible">iOS 15.8.8</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-se.html">iPhone SE (1st Gen, 2016)</a></td>
+            <td class="compatible">iOS 15.8.8</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-6s.html">iPhone 6s</a></td>
+            <td class="compatible">iOS 15.8.8</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-6.html">iPhone 6</a></td>
+            <td class="compatible">iOS 12.5.8</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-5s.html">iPhone 5s</a></td>
+            <td class="compatible">iOS 12.5.8</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-5.html">iPhone 5</a></td>
+            <td class="compatible">iOS 10.3.4</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-4s.html">iPhone 4s</a></td>
+            <td class="compatible">iOS 9.3.6</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/iphone/iphone-4.html">iPhone 4</a></td>
+            <td class="compatible">iOS 7.1.2</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card chart-container">
+      <h2>iPad</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Latest bypassable iOS version (beta version if applicable)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="device-name"><a href="devices/ipad/ipad-11.html">iPad (11th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/ipad/ipad-10.html">iPad (10th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/ipad/ipad-9.html">iPad (9th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/ipad/ipad-8.html">iPad (8th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/ipad/ipad-7.html">iPad (7th Gen)</a></td>
+            <td class="compatible">iPadOS 18.7.9</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/ipad/ipad-6.html">iPad (6th Gen)</a></td>
+            <td class="compatible">iPadOS 17.7.11</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/ipad/ipad-5.html">iPad (5th Gen)</a></td>
+            <td class="compatible">iPadOS 16.7.16</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/ipad/ipad-4.html">iPad (4th Gen)</a></td>
+            <td class="compatible">iOS 10.3.4</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/ipad/ipad-3.html">iPad (3rd Gen)</a></td>
+            <td class="compatible">iOS 9.3.6</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/ipad/ipad-2.html">iPad (2nd Gen)</a></td>
+            <td class="compatible">iOS 9.3.6</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card chart-container">
+      <h2>iPod Touch</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Latest bypassable iOS version (beta version if applicable)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="device-name"><a href="devices/ipod-touch/ipod-touch-7.html">iPod Touch (7th Gen)</a></td>
+            <td class="compatible">iOS 15.8.8</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/ipod-touch/ipod-touch-6.html">iPod Touch (6th Gen)</a></td>
+            <td class="compatible">iOS 12.5.8</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="devices/ipod-touch/ipod-touch-5.html">iPod Touch (5th Gen)</a></td>
+            <td class="compatible">iOS 9.3.5</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Important Notes</h2>
+      <ul>
+        <li><strong>checkm8 Exploit:</strong> Affects devices with A7-A11 chips. Requires DFU mode access and specialized tools.</li>
+        <li><strong>checkra1n Tool:</strong> Works on A5-A11 chips. Requires a computer and USB connection. Not available for newer chips.</li>
+        <li><strong>Hardware Methods:</strong> Vary by device generation. May require physical device modifications or specialized equipment.</li>
+        <li><strong>Software Workarounds:</strong> Limited effectiveness on newer devices. Often requires specific iOS versions or configurations.</li>
+        <li><strong>Compatibility:</strong> Methods depend on device chip, iOS version, and specific hardware configuration.</li>
+        <li><strong>Disclaimer:</strong> This chart is for educational purposes. Always verify compatibility and understand legal implications before attempting any procedure.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>For educational purposes only. Respect device ownership and local laws.</p>
+    </footer>
   </div>
-
-  <script>
-    const choices = document.querySelectorAll('.choice');
-    let selected = null;
-    choices.forEach(c=>{
-      c.addEventListener('click',()=>select(c));
-      c.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' ') { e.preventDefault(); select(c); } });
-    });
-    function select(el){
-      choices.forEach(x=>x.classList.remove('selected'));
-      el.classList.add('selected');
-      selected = el.getAttribute('data-device');
-      document.getElementById('viewBtn').disabled = false;
-      document.getElementById('hint').textContent = 'Selected: ' + el.textContent;
-    }
-    document.getElementById('viewBtn').addEventListener('click',()=>{
-      if(!selected) return;
-      // navigate to chart with query param
-      location.href = 'chart.html?device=' + encodeURIComponent(selected);
-    });
-    document.getElementById('resetBtn').addEventListener('click',()=>{
-      choices.forEach(x=>x.classList.remove('selected'));
-      selected = null;
-      document.getElementById('viewBtn').disabled = true;
-      document.getElementById('hint').textContent = 'Choose a device type to enable the chart.';
-    });
-  </script>
 </body>
 </html>
