@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Compatibility Chart — Select Device</title>
+  <style>
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;background:#f5f7fa}
+    .card{background:#fff;padding:28px;border-radius:10px;box-shadow:0 6px 20px rgba(30,40,60,0.08);width:360px;text-align:center}
+    h1{margin:0 0 12px;font-size:20px}
+    p.lead{margin:0 0 18px;color:#556}
+    .choices{display:flex;gap:10px;justify-content:center;margin:18px 0}
+    .choice{flex:1;padding:12px 10px;border-radius:8px;border:1px solid #e1e6ef;background:#f9fbff;cursor:pointer;user-select:none}
+    .choice.selected{background:#2b7cff;color:#fff;border-color:#1f62d0}
+    .actions{display:flex;gap:10px;justify-content:center;margin-top:14px}
+    .btn{padding:10px 14px;border-radius:8px;border:0;background:#2b7cff;color:#fff;cursor:pointer}
+    .btn.secondary{background:#e9eef8;color:#2b3a5a}
+    small{display:block;margin-top:10px;color:#889}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Device Compatibility Chart</h1>
+      <p class="lead">Select your device type to view supported models and firmware compatibility.</p>
+
+      <div class="choices" role="tablist" aria-label="Device types">
+        <div class="choice" data-device="iphone" tabindex="0">iPhone</div>
+        <div class="choice" data-device="ipad" tabindex="0">iPad</div>
+        <div class="choice" data-device="ipod" tabindex="0">iPod Touch</div>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="viewBtn" disabled>View Chart</button>
+        <button class="btn secondary" id="resetBtn">Reset</button>
+      </div>
+      <small id="hint">Choose a device type to enable the chart.</small>
+    </div>
+  </div>
+
+  <script>
+    const choices = document.querySelectorAll('.choice');
+    let selected = null;
+    choices.forEach(c=>{
+      c.addEventListener('click',()=>select(c));
+      c.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' ') { e.preventDefault(); select(c); } });
+    });
+    function select(el){
+      choices.forEach(x=>x.classList.remove('selected'));
+      el.classList.add('selected');
+      selected = el.getAttribute('data-device');
+      document.getElementById('viewBtn').disabled = false;
+      document.getElementById('hint').textContent = 'Selected: ' + el.textContent;
+    }
+    document.getElementById('viewBtn').addEventListener('click',()=>{
+      if(!selected) return;
+      // navigate to chart with query param
+      location.href = 'chart.html?device=' + encodeURIComponent(selected);
+    });
+    document.getElementById('resetBtn').addEventListener('click',()=>{
+      choices.forEach(x=>x.classList.remove('selected'));
+      selected = null;
+      document.getElementById('viewBtn').disabled = true;
+      document.getElementById('hint').textContent = 'Choose a device type to enable the chart.';
+    });
+  </script>
+</body>
+</html>
