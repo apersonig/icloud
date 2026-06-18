@@ -14,8 +14,8 @@
 - [x] iPhone X
 - [x] iPhone XS
 - [x] iPhone 11
-- [ ] iPhone SE 2nd Gen
-- [ ] iPhone 12
+- [x] iPhone SE 2nd Gen
+- [x] iPhone 12
 - [ ] iPhone 13
 - [ ] iPhone SE 3rd Gen
 - [ ] iPhone 14
