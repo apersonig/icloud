@@ -12,7 +12,7 @@
 - [x] iPhone 7
 - [x] iPhone 8
 - [x] iPhone X
-- [ ] iPhone XS
+- [x] iPhone XS
 - [ ] iPhone XR
 - [ ] iPhone 11
 - [ ] iPhone SE 2nd Gen
@@ -49,3 +49,5 @@
 - [ ] Using 32bit-Bruteforce-Passcode
 - [ ] Using iFRPFILE
 - [ ] Using Hackt1vator
+- [ ] Using R1nderpest
+- [ ] Using bookra1n
