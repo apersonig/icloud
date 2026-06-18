@@ -30,9 +30,9 @@
 - [x] iPad 2
 - [x] iPad 3rd Gen
 - [x] iPad 4th Gen
-- [ ] iPad 5th Gen
-- [ ] iPad 6th Gen
-- [ ] iPad 7th Gen
+- [x] iPad 5th Gen
+- [x] iPad 6th Gen
+- [x] iPad 7th Gen
 - [ ] iPad 8th Gen
 - [ ] iPad 9th Gen
 - [ ] iPad 10th Gen
@@ -50,3 +50,4 @@
 - [ ] Using Hackt1vator
 - [ ] Using R1nderpest
 - [ ] Using bookra1n
+- [ ] Using bookra1n (checkm8)
