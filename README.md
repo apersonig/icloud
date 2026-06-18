@@ -10,7 +10,7 @@
 - [x] iPhone 6s
 - [x] iPhone SE
 - [x] iPhone 7
-- [ ] iPhone 8
+- [x] iPhone 8
 - [ ] iPhone X
 - [ ] iPhone XS
 - [ ] iPhone XR
