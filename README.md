@@ -13,8 +13,7 @@
 - [x] iPhone 8
 - [x] iPhone X
 - [x] iPhone XS
-- [ ] iPhone XR
-- [ ] iPhone 11
+- [x] iPhone 11
 - [ ] iPhone SE 2nd Gen
 - [ ] iPhone 12
 - [ ] iPhone 13
