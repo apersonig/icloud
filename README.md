@@ -33,10 +33,10 @@
 - [x] iPad 5th Gen
 - [x] iPad 6th Gen
 - [x] iPad 7th Gen
-- [ ] iPad 8th Gen
-- [ ] iPad 9th Gen
-- [ ] iPad 10th Gen
-- [ ] iPad 11th Gen
+- [x] iPad 8th Gen
+- [x] iPad 9th Gen
+- [x] iPad 10th Gen
+- [x] iPad 11th Gen
 
 ### iPod Touch charts
 - [ ] iPod Touch 5th Gen
