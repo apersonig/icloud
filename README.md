@@ -47,7 +47,7 @@
 - [x] Removing setup.app
 - [x] Using 32bit-Bruteforce-Passcode
 - [ ] Using iFRPFILE
-- [ ] Using Hackt1vator
+- [x] Using Hackt1vator
 - [ ] Using R1nderpest
 - [ ] Using bookra1n
 - [ ] Using bookra1n (checkm8)
