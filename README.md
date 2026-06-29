@@ -1,6 +1,5 @@
 # https://icloud.betaxp.tk
 
-### This is the source code for the iCloud Bypass Guide website.
 
 ## Todo list:
 ### iPhone charts
@@ -9,12 +8,18 @@
 - [x] iPhone 5
 - [x] iPhone 5s
 - [x] iPhone 6
+- [x] iPhone 6+
 - [x] iPhone 6s
+- [x] iPhone 6s+
 - [x] iPhone SE
 - [x] iPhone 7
+- [x] iPhone 7+
 - [x] iPhone 8
+- [x] iPhone 8+
 - [x] iPhone X
+- [x] iPhone XR
 - [x] iPhone XS
+- [x] iPhone XS Max
 - [x] iPhone 11
 - [x] iPhone SE 2nd Gen
 - [x] iPhone 12
