@@ -34,23 +34,33 @@
 - [x] iPhone 17e
 
 ### iPad Air charts
-- [ ] iPad Air
-- [ ] iPad Air 2
-- [ ] iPad Air 3
-- [ ] iPad Air 4
-- [ ] iPad Air 5
-- [ ] iPad Air 6
-- [ ] iPad Air 7
-- [ ] iPad Air 8
+- [x] iPad Air
+- [x] iPad Air 2nd Gen
+- [x] iPad Air 3rd Gen
+- [x] iPad Air 4th Gen
+- [x] iPad Air 5th Gen
+- [x] iPad Air 6th Gen
+- [x] iPad Air 7th Gen
+- [x] iPad Air 8th Gen
 
 ### iPad Mini charts
-- [ ] iPad Mini
-- [ ] iPad Mini 2
-- [ ] iPad Mini 3
-- [ ] iPad Mini 4
-- [ ] iPad Mini 5
-- [ ] iPad Mini 6
-- [ ] iPad Mini 7
+- [x] iPad Mini
+- [x] iPad Mini 2nd Gen
+- [x] iPad Mini 3rd Gen
+- [x] iPad Mini 4th Gen
+- [x] iPad Mini 5th Gen
+- [x] iPad Mini 6th Gen
+- [x] iPad Mini 7th Gen
+
+### iPad Pro charts
+- [x] iPad Pro
+- [x] iPad Pro 2nd Gen
+- [x] iPad Pro 3rd Gen
+- [x] iPad Pro 4th Gen
+- [x] iPad Pro 5th Gen
+- [x] iPad Pro 6th Gen
+- [x] iPad Pro 7th Gen
+- [x] iPad Pro 8th Gen
 
 ### iPad charts
 - [x] iPad 2
