@@ -6,6 +6,7 @@
 - [x] iPhone 4
 - [x] iPhone 4s
 - [x] iPhone 5
+- [x] iPhone 5c
 - [x] iPhone 5s
 - [x] iPhone 6
 - [x] iPhone 6+
