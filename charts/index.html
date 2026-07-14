@@ -117,6 +117,60 @@
       margin: 16px 0;
       color: var(--text);
     }
+    .dropdown {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 860px;
+      margin: 8px 0 24px;
+      z-index: 20;
+    }
+    .dropbtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      border: 0;
+      border-radius: 14px;
+      padding: 12px 18px;
+      background: var(--link);
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .dropbtn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      width: 100%;
+      min-width: 220px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+    }
+    .dropdown.open .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 12px 14px;
+      color: var(--text);
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .dropdown-content a:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--link);
+    }
   </style>
 </head>
 <body class="dark">
@@ -161,7 +215,20 @@
       </div>
     </section>
 
-    <section class="card chart-container">
+    <!-- dropdown menu for each section -->
+    <div class="dropdown">
+      <button class="dropbtn" type="button" aria-haspopup="true" aria-expanded="false">Jump to Section</button>
+      <div class="dropdown-content" role="menu">
+        <a href="#iphone">iPhone</a>
+        <a href="#ipad">iPad</a>
+        <a href="#ipad-mini">iPad Mini</a>
+        <a href="#ipad-pro">iPad Pro</a>
+        <a href="#ipad-air">iPad Air</a>
+        <a href="#ipod-touch">iPod Touch</a>
+      </div>
+    </div>
+
+    <section id="iphone" class="card chart-container">
       <h2>iPhone</h2>
       <table>
         <thead>
@@ -291,141 +358,7 @@
       </table>
     </section>
 
-    <section class="card chart-container">
-      <h2>iPad Mini</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Model</th>
-            <th>Latest bypassable iOS version (beta version if applicable)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini-7th-gen.html">iPad Mini (7th Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini-6th-gen.html">iPad Mini (6th Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini-5th-gen.html">iPad Mini (5th Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini-4th-gen.html">iPad Mini (4th Gen)</a></td>
-            <td class="compatible">iPadOS 15.8.8</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini-3rd-gen.html">iPad Mini (3rd Gen)</a></td>
-            <td class="compatible">iOS 12.5.8</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini-2nd-gen.html">iPad Mini (2nd Gen)</a></td>
-            <td class="compatible">iOS 12.5.8</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini.html">iPad Mini</a></td>
-            <td class="compatible">iOS 9.3.6</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-        <section class="card chart-container">
-      <h2>iPad Air</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Model</th>
-            <th>Latest bypassable iOS version (beta version if applicable)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="device-name"><a href="../devices/ipar-air/ipad-air-8th-gen.html">iPad Air (8th Gen)</a></td>
-            <td class="incompatible">None</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-air/ipad-air-7th-gen.html">iPad Air (7th Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-air/ipad-air-6th-gen.html">iPad Air (6th Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-air/ipad-air-5th-gen.html">iPad Air (5th Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-air/ipad-air-4th-gen.html">iPad Air (4th Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-air/ipad-air-3rd-gen.html">iPad Air (3rd Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-air/ipad-air-2nd-gen.html">iPad Air (2nd Gen)</a></td>
-            <td class="compatible">iPadOS 15.8.8</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-air/ipad-air.html">iPad Air</a></td>
-            <td class="compatible">iOS 12.5.8</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="card chart-container">
-      <h2>iPad Pro</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Model</th>
-            <th>Latest bypassable iOS version (beta version if applicable)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="device-name"><a href="../devices/ipar-pro/ipad-pro-8th-gen.html">iPad Pro (8th Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-7th-gen.html">iPad Pro (7th Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-6th-gen.html">iPad Pro (6th Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-5th-gen.html">iPad Pro (5th Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-4th-gen.html">iPad Pro (4th Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-3rd-gen.html">iPad Pro (3rd Gen)</a></td>
-            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-2nd-gen.html">iPad Pro (2nd Gen)</a></td>
-            <td class="compatible">iPadOS 17.7.11</td>
-          </tr>
-          <tr>
-            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro.html">iPad Pro</a></td>
-            <td class="compatible">iPadOS 16.7.16</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="card chart-container">
+    <section id="ipad" class="card chart-container">
       <h2>iPad</h2>
       <table>
         <thead>
@@ -479,7 +412,141 @@
       </table>
     </section>
 
-    <section class="card chart-container">
+    <section id="ipad-mini" class="card chart-container">
+      <h2>iPad Mini</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Latest bypassable iOS version (beta version if applicable)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini-7th-gen.html">iPad Mini (7th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini-6th-gen.html">iPad Mini (6th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini-5th-gen.html">iPad Mini (5th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini-4th-gen.html">iPad Mini (4th Gen)</a></td>
+            <td class="compatible">iPadOS 15.8.8</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini-3rd-gen.html">iPad Mini (3rd Gen)</a></td>
+            <td class="compatible">iOS 12.5.8</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini-2nd-gen.html">iPad Mini (2nd Gen)</a></td>
+            <td class="compatible">iOS 12.5.8</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-mini/ipad-mini.html">iPad Mini</a></td>
+            <td class="compatible">iOS 9.3.6</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="ipad-pro" class="card chart-container">
+      <h2>iPad Pro</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Latest bypassable iOS version (beta version if applicable)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-8th-gen.html">iPad Pro (8th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-7th-gen.html">iPad Pro (7th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-6th-gen.html">iPad Pro (6th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-5th-gen.html">iPad Pro (5th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-4th-gen.html">iPad Pro (4th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-3rd-gen.html">iPad Pro (3rd Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro-2nd-gen.html">iPad Pro (2nd Gen)</a></td>
+            <td class="compatible">iPadOS 17.7.11</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-pro/ipad-pro.html">iPad Pro</a></td>
+            <td class="compatible">iPadOS 16.7.16</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="ipad-air" class="card chart-container">
+      <h2>iPad Air</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Latest bypassable iOS version (beta version if applicable)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="device-name"><a href="../devices/ipar-air/ipad-air-8th-gen.html">iPad Air (8th Gen)</a></td>
+            <td class="incompatible">None</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-air/ipad-air-7th-gen.html">iPad Air (7th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-air/ipad-air-6th-gen.html">iPad Air (6th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-air/ipad-air-5th-gen.html">iPad Air (5th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-air/ipad-air-4th-gen.html">iPad Air (4th Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-air/ipad-air-3rd-gen.html">iPad Air (3rd Gen)</a></td>
+            <td class="partial">iPadOS 26.1 (26.2 beta 1)</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-air/ipad-air-2nd-gen.html">iPad Air (2nd Gen)</a></td>
+            <td class="compatible">iPadOS 15.8.8</td>
+          </tr>
+          <tr>
+            <td class="device-name"><a href="../devices/ipad-air/ipad-air.html">iPad Air</a></td>
+            <td class="compatible">iOS 12.5.8</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="ipod-touch" class="card chart-container">
       <h2>iPod Touch</h2>
       <table>
         <thead>
@@ -528,6 +595,42 @@
           applyTheme(next);
         });
       }
+    })();
+
+    (function(){
+      var dropdown = document.querySelector('.dropdown');
+      var button = dropdown && dropdown.querySelector('.dropbtn');
+      var content = dropdown && dropdown.querySelector('.dropdown-content');
+
+      if(!dropdown || !button || !content) return;
+
+      function closeDropdown(){
+        dropdown.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+      }
+
+      function openDropdown(){
+        dropdown.classList.add('open');
+        button.setAttribute('aria-expanded', 'true');
+      }
+
+      button.addEventListener('click', function(event){
+        event.stopPropagation();
+        if(dropdown.classList.contains('open')) closeDropdown();
+        else openDropdown();
+      });
+
+      content.addEventListener('click', function(event){
+        if(event.target.matches('a')) closeDropdown();
+      });
+
+      document.addEventListener('click', function(event){
+        if(!dropdown.contains(event.target)) closeDropdown();
+      });
+
+      document.addEventListener('keydown', function(event){
+        if(event.key === 'Escape') closeDropdown();
+      });
     })();
   </script>
 </body>
