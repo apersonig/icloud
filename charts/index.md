@@ -18,7 +18,7 @@ If you own the Apple Account connected to the device, you should try to [recover
 </div>
 
 ::: tip Model variants
-Any Mini, Plus, Pro, or Pro Max model can use the regular model's method unless a device page says otherwise.
+Have a Plus/Pro/Mini variant of a device and can't find a chart for it? Use the regular model!
 :::
 
 ## iPhone {#iphone}

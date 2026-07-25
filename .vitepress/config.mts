@@ -12,14 +12,16 @@ export default defineConfig({
       { text: 'Compatibility Chart', link: '/charts/' }
     ],
 
-    /*sidebar: [
+    sidebar: [
       {
-        text: 'iCloud Bypass Guide',
         items: [
-          { text: 'Compatibility Chart', link: '/charts/' }
+          { text: 'iCloud Bypass Guide' , link: '/' },
+          { text: 'Get Started', link: '/charts/' },
+          { text: 'Sideloading without Setup.app', link: '/guides/misc/sideloading-without-setupapp' },
+          { text: 'iTunes Syncing without Setup.app', link: '/guides/methods/' }
         ]
       }
-    ],*/
+    ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/OksmaWarez/icloud' }
