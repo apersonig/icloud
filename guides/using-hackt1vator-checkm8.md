@@ -1,17 +1,15 @@
 ---
-title: Using bookra1n (checkm8) | iCloud Bypass Guide
-description: Using bookra1n (checkm8) | iCloud Bypass Guide
+title: Using Hackt1vator (checkm8) | iCloud Bypass Guide
+description: Using Hackt1vator (checkm8) | iCloud Bypass Guide
 ---
 
-# Using Bookra1n (checkm8)
+# Using Hackt1vator (checkm8)
 
-## Overview
+Hackt1vator is an untethered bypass tool for Checkm8-compatible devices and A12+ devices up to iOS 26.1.
 
-Bookra1n's checkm8 activator is an untethered bypass tool for Checkm8-compatible devices up to iOS 18.
+## Requirements
 
-# Requirements
-
-- A computer running Windows with [Bookra1n Checkm8](http://bookra1n.com/Blue/legacydownloads/checkm8.zip) installed.
+- A computer running Windows or MacOS with [Hackt1vator](https://hackt1vator.com/downloads/) installed.
 - A 128MB or greater USB Drive.
   - If you don't have a USB Drive, but do have another form of supported removable bootable hardware (e.g. an SD card or DVD), you can use that instead of a USB Drive.
 - The latest version of [palen1x](https://github.com/palera1n/palen1x/releases).
@@ -33,11 +31,13 @@ Bookra1n's checkm8 activator is an untethered bypass tool for Checkm8-compatible
 9. Type `palera1n -l`.
 10. Follow the on screen instructions to enter DFU mode.
 
-## Running Bookra1n
+## Running Hackt1vator
 
-1. Download and extract Bookra1n to an easily accessible location on your computer.
-2. Run `Bookra1n.exe`.
+1. Download and extract Hackt1vator to an easily accessible location on your computer.
+2. Run your platform's equivalent of `Hackt1vator`.
 3. Connect your device to your computer using a USB cable.
-4. Click `Activate Device` to bypass your device.
+4. Join the [Hackt1vator Discord Server](https://discord.com/servers/hackt1vator-1116502617510641676) and register your device in the register channel.
+5. In the Activation tab, click `Hello Activation 12-18`.
+6. Wait for the device to activate.
 
-<footer class="guide-footer"><p>For educational purposes only. Respect ownership and legal restrictions.</p></footer>
+<footer class="guide-footer"><p>For educational purposes only. Respect device ownership and local laws.</p></footer>

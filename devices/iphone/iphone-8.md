@@ -22,7 +22,7 @@ description: Different firmware versions will require different steps to bypass 
           <tr>
             <td>13.0</td>
             <td>16.7.16</td>
-            <td><a href="/guides/using-hackt1vator">Using Hackt1vator</a></td>
+            <td><a href="/guides/using-hackt1vator-checkm8">Using Hackt1vator (checkm8)</a></td>
           </tr>
           <tr>
             <td>12.0</td>

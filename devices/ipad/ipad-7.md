@@ -22,7 +22,7 @@ description: Different firmware versions will require different steps to bypass 
           <tr>
             <td>18.0</td>
             <td>18.7.9</td>
-            <td><a href="/guides/using-hackt1vator">Using Hackt1vator</a></td>
+            <td><a href="/guides/using-bookra1n-checkm8">Using bookra1n (checkm8)</a></td>
           </tr>
           <tr>
             <td>17.0</td>
@@ -32,7 +32,7 @@ description: Different firmware versions will require different steps to bypass 
           <tr>
             <td>13.1</td>
             <td>16.6.1</td>
-            <td><a href="/guides/using-hackt1vator">Using Hackt1vator</a></td>
+            <td><a href="/guides/using-bookra1n-checkm8">Using bookra1n (checkm8)</a></td>
           </tr>
         </tbody>
       </table>

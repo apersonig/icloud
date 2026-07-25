@@ -23,7 +23,7 @@ description: Different firmware versions will require different steps to bypass 
           <tr>
             <td>13.0</td>
             <td>15.8.8</td>
-            <td><a href="/guides/using-hackt1vator">Using Hackt1vator</a></td>
+            <td><a href="/guides/using-hackt1vator-checkm8">Using Hackt1vator (checkm8)</a></td>
             <td rowspan="2"><a href="/guides/restoring-with-activation-tickets">Restoring with Activation Tickets</a></td>
           </tr>
           <tr>
