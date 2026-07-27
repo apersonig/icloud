@@ -37,7 +37,7 @@ description: Different firmware versions will require different steps to bypass 
           <tr>
             <td>13.0</td>
             <td>13.7</td>
-            <td><a href="/guides/using-hackt1vator">Using Hackt1vator</a></td>
+            <td>-</td>
           </tr>
         </tbody>
       </table>
