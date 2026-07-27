@@ -82,8 +82,11 @@
 ### Tutorials
 - [x] Removing setup.app
 - [x] Using 32bit-Bruteforce-Passcode
-- [ ] Using iFRPFILE
-- [x] Using Hackt1vator (checkm8)
-- [x] Using Hackt1vator (A12+)
-- [ ] Using R1nderpest
 - [x] Using bookra1n (checkm8)
+- [x] Using Hackt1vator (checkm8)
+- [ ] Using Hackt1vator (A12+)
+- [ ] Using iFRPFILE
+- [ ] Using R1nderpest
+- [ ] Sideloading without setup.app
+- [ ] iTunes syncing without setup.app
+- [ ] Pwning with checkm8-a5

@@ -9,15 +9,17 @@ description: Deleting Setup.app | iCloud Bypass Guide
 
 Deleting Setup.app is an universal method to bypass activation on 32-bit iOS devices in case a specific device and iOS version combination is not supported by any other tool.
 
-**Warning:** It is strongly recommended to use any other method for bypassing activation, as deleting setup.app will break:
-
+::: warning
+It is strongly recommended to use any other method for bypassing activation, as deleting setup.app will break:
 - iTunes syncing
-
 - Siri
-
 - Notifications
-
 - and possibly iCloud sign-in.
+:::
+
+::: info
+Entering pwnDFU mode on A5(X) devices WILL require the use of <a href="pwning-with-checkm8-a5">checkm8-a5</a>, which require the use of a Raspberry Pi Pico or an Arduino with a USB host shield.
+:::
 
 ## Prerequisites
 
@@ -52,8 +54,6 @@ Click one of the tools below to reveal the matching ramdisk creation instruction
 
 **Info:** You can find your iOS version by using [iDescriptor](https://github.com/iDescriptor/iDescriptor) (all platforms) or [Legacy-iOS-Kit](https://github.com/LukeZGD/Legacy-iOS-Kit) (Linux/macOS)
 
-**Warning:** A5 devices will require the use of `checkm8-a5` to enter pwnDFU mode.
-
 - Once the device has booted the SSH ramdisk, select `Connect to SSH` in the terminal window.
 
 - Finally, run `mount.sh` to mount the filesystems.
@@ -78,9 +78,20 @@ Click one of the tools below to reveal the matching ramdisk creation instruction
 
 ### Step 2: Remove setup.app
 
-In the SSH terminal, run this command to rename setup.app:
+In the SSH terminal, run these commands to mitigate `setup.app`:
+
+::: details iOS 10.2.1 and lower
 
 - `mv /mnt1/Applications/Setup.app /mnt1/Applications/Setup.app.bak`
+
+:::
+
+::: details iOS 10.3 and later
+
+- `mv /mnt1/Applications/Setup.app /mnt1/Applications/Setup.app.bak`
+- `/usr/sbin/nvram oblit-inprogress=5`
+
+:::
 
 ### Step 3: Reboot
 
