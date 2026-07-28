@@ -87,6 +87,6 @@
 - [ ] Using Hackt1vator (A12+)
 - [ ] Using iFRPFILE
 - [ ] Using R1nderpest
-- [ ] Sideloading without setup.app
+- [x] Sideloading without setup.app
 - [ ] iTunes syncing without setup.app
 - [ ] Pwning with checkm8-a5
