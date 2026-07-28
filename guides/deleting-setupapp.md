@@ -31,31 +31,22 @@ A computer running Linux or macOS with the following installed:
 
 Click one of the tools below to reveal the matching ramdisk creation instructions.
 
-
-::: details **Legacy-iOS-Kit** Instructions
-
-- Download Legacy iOS Kit and extract the zip archive.
-
-- Open a Terminal window.
-
-- If on macOS, install Xcode Command Line Tools by running this command: `xcode-select --install`
-
-- Connect your device to your computer.
-
-- Go to where the extracted files are located, drag `restore.sh` to the Terminal window, and press Enter/Return.
-
-- Go to Useful Utilities -> SSH Ramdisk
-
-- Follow on-screen instructions to create and boot an SSH ramdisk.
-
 ::: info
 
 You can find your iOS version by using [iDescriptor](https://github.com/iDescriptor/iDescriptor) (all platforms) or [Legacy-iOS-Kit](https://github.com/LukeZGD/Legacy-iOS-Kit) (Linux/macOS).
 
 :::
 
-- Once the device has booted the SSH ramdisk, select `Connect to SSH` in the terminal window.
+::: details **Legacy-iOS-Kit** Instructions
 
+- Download Legacy iOS Kit and extract the zip archive.
+- Open a Terminal window.
+- If on macOS, install Xcode Command Line Tools by running this command: `xcode-select --install`
+- Connect your device to your computer.
+- Go to where the extracted files are located, drag `restore.sh` to the Terminal window, and press Enter/Return.
+- Go to Useful Utilities -> SSH Ramdisk
+- Follow on-screen instructions to create and boot an SSH ramdisk.
+- Once the device has booted the SSH ramdisk, select `Connect to SSH` in the terminal window.
 - Finally, run `mount.sh` to mount the filesystems.
 
 :::
@@ -63,19 +54,9 @@ You can find your iOS version by using [iDescriptor](https://github.com/iDescrip
 ::: details **SSHRD_Script** Instructions
 
 - Clone the SSHRD_Script repository and enter it using the terminal: `git clone https://github.com/verygenericname/SSHRD_Script --recursive && cd SSHRD_Script`.
-
 - Run `./sshrd.sh [iOS version for ramdisk]`.
-
-::: info
-
-You can find your iOS version by using [iDescriptor](https://github.com/iDescriptor/iDescriptor) (all platforms) or [Legacy-iOS-Kit](https://github.com/LukeZGD/Legacy-iOS-Kit) (Linux/macOS).
-
-:::
-
 - Run `./sshrd.sh boot` to boot the ramdisk.
-
 - Run `./sshrd.sh ssh` to connect to SSH on your device.
-
 - Mount the filesystems by running `mount_filesystems`.
 
 :::
