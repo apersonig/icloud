@@ -48,7 +48,11 @@ Click one of the tools below to reveal the matching ramdisk creation instruction
 
 - Follow on-screen instructions to create and boot an SSH ramdisk.
 
-**Info:** You can find your iOS version by using [iDescriptor](https://github.com/iDescriptor/iDescriptor) (all platforms) or [Legacy-iOS-Kit](https://github.com/LukeZGD/Legacy-iOS-Kit) (Linux/macOS)
+::: info
+
+You can find your iOS version by using [iDescriptor](https://github.com/iDescriptor/iDescriptor) (all platforms) or [Legacy-iOS-Kit](https://github.com/LukeZGD/Legacy-iOS-Kit) (Linux/macOS).
+
+:::
 
 - Once the device has booted the SSH ramdisk, select `Connect to SSH` in the terminal window.
 
@@ -62,7 +66,11 @@ Click one of the tools below to reveal the matching ramdisk creation instruction
 
 - Run `./sshrd.sh [iOS version for ramdisk]`.
 
-**Info:** You can find your iOS version by using [iDescriptor](https://github.com/iDescriptor/iDescriptor) (all platforms) or [Legacy-iOS-Kit](https://github.com/LukeZGD/Legacy-iOS-Kit) (Linux/macOS)
+::: info
+
+You can find your iOS version by using [iDescriptor](https://github.com/iDescriptor/iDescriptor) (all platforms) or [Legacy-iOS-Kit](https://github.com/LukeZGD/Legacy-iOS-Kit) (Linux/macOS).
+
+:::
 
 - Run `./sshrd.sh boot` to boot the ramdisk.
 
