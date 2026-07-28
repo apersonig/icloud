@@ -1,5 +1,5 @@
 ---
-title: Deleting Setup.app | iCloud Bypass Guide
+title: Deleting Setup.app
 description: Deleting Setup.app | iCloud Bypass Guide
 ---
 
@@ -18,20 +18,16 @@ It is strongly recommended to use any other method for bypassing activation, as 
 :::
 
 ::: info
-Entering pwnDFU mode on A5(X) devices WILL require the use of <a href="pwning-with-checkm8-a5">checkm8-a5</a>, which require the use of a Raspberry Pi Pico or an Arduino with a USB host shield.
+Entering pwnDFU mode on A5(X) devices WILL require the use of <a href="misc/pwning-with-checkm8-a5">checkm8-a5</a>, which require the use of a Raspberry Pi Pico or an Arduino with a USB host shield.
 :::
 
-## Prerequisites
-
-### What You'll Need
+## Requirements
 
 A computer running Linux or macOS with the following installed:
 
 - An SSH ramdisk creation and booting tool, like [Legacy-iOS-Kit](https://github.com/LukeZGD/Legacy-iOS-Kit) or [SSHRD_Script](https://github.com/verygenericname/SSHRD_Script)
 
-## Step-by-Step Guide
-
-### Step 1: Ramdisk creation
+## Creating a Ramdisk
 
 Click one of the tools below to reveal the matching ramdisk creation instructions.
 
@@ -76,7 +72,8 @@ Click one of the tools below to reveal the matching ramdisk creation instruction
 
 :::
 
-### Step 2: Remove setup.app
+
+## Removing setup.app
 
 In the SSH terminal, run these commands to mitigate `setup.app`:
 
@@ -93,7 +90,8 @@ In the SSH terminal, run these commands to mitigate `setup.app`:
 
 :::
 
-### Step 3: Reboot
+
+### Rebooting
 
 Reboot your device to apply the changes by either holding the power and home buttons for 10 seconds or running `/sbin/reboot`. Your device should now boot into the home screen.
 

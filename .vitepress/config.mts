@@ -18,7 +18,8 @@ export default defineConfig({
           { text: 'iCloud Bypass Guide' , link: '/' },
           { text: 'Get Started', link: '/charts/' },
           { text: 'Sideloading without Setup.app', link: '/guides/misc/sideloading-without-setupapp' },
-          { text: 'iTunes Syncing without Setup.app', link: '/guides/methods/' }
+          { text: 'iTunes Syncing without Setup.app', link: '/guides/misc/itunes-syncing-without-setupapp' },
+          { text: 'Pwning with checkm8-a5', link: '/guides/misc/pwning-with-checkm8-a5' },
         ]
       }
     ],
