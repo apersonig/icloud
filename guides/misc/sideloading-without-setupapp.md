@@ -5,7 +5,7 @@ description: Sideloading without Setup.app | iCloud Bypass Guide
 
 # Sideloading without Setup.app
 
-Removing setup.app causes a lot of issues, and one of them is breaking IPA sideloading. This page serves as a list of workarounds on how to sideload apps onto a jailbroken iDevice with setup.app mitigated.
+Removing setup.app causes a lot of issues, and one of them is breaking IPA sideloading. This page serves as a list of workarounds on how to sideload apps onto an iDevice with setup.app mitigated.
 
 ## Signing in with an Apple ID
 

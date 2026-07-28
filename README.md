@@ -88,5 +88,5 @@
 - [ ] Using iFRPFILE
 - [ ] Using R1nderpest
 - [x] Sideloading without setup.app
-- [ ] iTunes syncing without setup.app
+- [x] iTunes syncing without setup.app
 - [ ] Pwning with checkm8-a5
