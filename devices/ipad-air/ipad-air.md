@@ -34,7 +34,7 @@ description: Different firmware versions will require different steps to bypass 
           <tr>
             <td>7.0</td>
             <td>8.4.1</td>
-            <td><a href="/guides/using-32bit-bruteforce-passcode">Using 32bit-Bruteforce-Passcode</a></td>
+            <td>-</td>
           </tr>
         </tbody>
       </table>
